@@ -11,8 +11,7 @@
     "yeoman-generator"
   ],
   "author": "<%- author %>",
-  "license": "MIT",
-  <% if (addGit) { %>
+  "license": "MIT"<% if (addGit) { %>,
   "repository": {
     "type": "git",
     "url": "<%= gitUrl %>"
