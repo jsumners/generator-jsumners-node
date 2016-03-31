@@ -1,0 +1,21 @@
+{
+  "name": "<%= appName %>",
+  "version": "0.1.0",
+  "description": "<%= description %>",
+  "homepage": "https://example.com/<%= appName %>",
+  "main": "<%= mainFile %>",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "author": "<%- author %>",
+  "license": "MIT",
+  <% if (addGit) { %>
+  "repository": {
+    "type": "git",
+    "url": "<%= gitUrl %>"
+  }
+  <% } %>
+}

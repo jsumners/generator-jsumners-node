@@ -1,0 +1,20 @@
+{
+  "name": "generator-jsumners-node",
+  "version": "0.1.0",
+  "description": "A Yeoman generator to kickstart Node.js projects the way James Sumners do",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "files": [
+    "generators/app"
+  ],
+  "author": "James Sumners <james.sumners@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "yeoman-generator": "^0.22.5"
+  }
+}
