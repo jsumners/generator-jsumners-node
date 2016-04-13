@@ -3,22 +3,33 @@
 const gulp = require('gulp');
 const $ = require('gulp-load-plugins')();
 
+const srcIncludes = [
+  '**/*.js',
+  '!node_modules/**',
+  '!coverage/**',
+  '!test/**' // tests can be wonky
+];
+
 gulp.task('lint', function lintTask() {
   return gulp
-    .src([
-      '**/*.js',
-      '!node_modules/**',
-      '!test/**' // tests can be wonky
-    ])
+    .src(srcIncludes)
     .pipe($.eslint())
     .pipe($.eslint.formatEach())
     .pipe($.eslint.failAfterError());
 });
 
-gulp.task('test', ['lint'], function testTask() {
+gulp.task('pre-test', function preTest() {
+  return gulp
+    .src(srcIncludes)
+    .pipe($.istanbul())
+    .pipe($.istanbul.hookRequire());
+});
+
+gulp.task('test', ['lint', 'pre-test'], function testTask() {
   return gulp
     .src(['test/*.js'])
-    .pipe($.mocha({ui: 'qunit', reporter: 'min'}));
+    .pipe($.mocha({ui: 'qunit', reporter: 'min'}))
+    .pipe($.istanbul.writeReports());
 });
 
 gulp.task('default', ['test']);

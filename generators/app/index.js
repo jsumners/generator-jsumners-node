@@ -32,7 +32,8 @@ MorhynGenerator.prototype.install = function install() {
     [
       'mocha', 'chai',
       'eslint', 'eslint-plugin-standard', 'eslint-plugin-promise',
-      'gulp', 'gulp-load-plugins', 'gulp-eslint', 'gulp-mocha'
+      'gulp', 'gulp-load-plugins', 'gulp-eslint', 'gulp-mocha',
+      'istanbul', 'gulp-istanbul'
     ],
     {saveDev: true}
   );
