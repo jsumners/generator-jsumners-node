@@ -13,7 +13,6 @@ module.exports = {
 
   env: {
     es6: true,
-    mocha: true,
     node: true
   },
 
@@ -182,7 +181,7 @@ module.exports = {
     'id-length': off,
     'id-match': off,
     'indent': [error, 2, {
-      SwitchCase: 2
+      SwitchCase: 1
     }],
     'jsx-quotes': off,
     'key-spacing': [warn, {beforeColon: false, afterColon: true, mode: 'minimum'}],

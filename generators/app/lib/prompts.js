@@ -34,9 +34,6 @@ module.exports = function prompts(instance) {
       }
       // just assume it's either a single keyword or comma separated
       return true;
-    },
-    filter: (input) => {
-      return (input.length > 0) ? input.split(',') : input;
     }
   });
 

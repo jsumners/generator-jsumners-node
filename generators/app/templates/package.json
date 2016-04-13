@@ -6,8 +6,8 @@
   "main": "<%= mainFile %>",
   "scripts": {
     "test": "gulp test"
-  },
-  "keywords": [],
+  }<% if (keywords) { %>,
+  "keywords": [<%= keywords %>],<% } %>
   "author": "<%- author %>",
   "license": "MIT"<% if (addGit) { %>,
   "repository": {
