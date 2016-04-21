@@ -7,7 +7,7 @@
   "scripts": {
     "test": "gulp test"
   }<% if (keywords) { %>,
-  "keywords": [<%= keywords %>],<% } %>
+  "keywords": <%- JSON.stringify(keywords) %>,<% } %>
   "author": "<%- author %>",
   "license": "MIT"<% if (addGit) { %>,
   "repository": {
