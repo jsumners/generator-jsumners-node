@@ -1,6 +1,6 @@
 {
   "name": "generator-jsumners-node",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "A Yeoman generator to kickstart Node.js projects the way James Sumners do",
   "main": "index.js",
   "scripts": {
