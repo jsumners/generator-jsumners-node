@@ -17,7 +17,6 @@ MorhynGenerator.prototype.configuring = function configuring() {
 
   this.copy('editorconfig', '.editorconfig');
   this.copy('gitignore', '.gitignore');
-  this.copy('eslintrc.js', '.eslintrc.js');
   this.copy('gulpfile.js');
   this.directory('test');
 
@@ -32,7 +31,7 @@ MorhynGenerator.prototype.install = function install() {
     [
       'mocha', 'chai',
       'eslint', 'eslint-plugin-standard', 'eslint-plugin-promise',
-      'gulp', 'gulp-load-plugins', 'gulp-eslint', 'gulp-mocha',
+      'gulp', 'gulp-load-plugins', 'gulp-standard', 'gulp-mocha',
       'istanbul', 'gulp-istanbul'
     ],
     {saveDev: true}
@@ -62,7 +61,7 @@ MorhynGenerator.prototype.writing = function writing() {
     this.template('project.iml', `${this.appName}.iml`);
     this.directory('idea', '.idea');
   }
-  
+
   done();
 };
 
