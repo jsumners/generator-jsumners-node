@@ -30,7 +30,6 @@ MorhynGenerator.prototype.install = function install() {
   this.npmInstall(
     [
       'mocha', 'chai',
-      'eslint', 'eslint-plugin-standard', 'eslint-plugin-promise',
       'gulp', 'gulp-load-plugins', 'gulp-standard', 'gulp-mocha',
       'standard', 'istanbul', 'gulp-istanbul', 'pre-commit'
     ],
